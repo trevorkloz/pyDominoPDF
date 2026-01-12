@@ -49,7 +49,7 @@ class Paper:
     Y_ScaleFactor = 1.0
 
 
-class DominoPDF:
+class pyDominoPDF:
     MarginBorder = False
 
     RowSpacing = 3.0
