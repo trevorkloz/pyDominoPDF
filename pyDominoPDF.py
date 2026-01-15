@@ -191,7 +191,7 @@ class pyDominoPDF:
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG, stream=sys.stdout)
-    testdoc = DominoPDF()
+    testdoc = pyDominoPDF()
     testdoc.Units = "inch"
     testdoc.Page.Height = 11
     testdoc.Page.Width = 8.5

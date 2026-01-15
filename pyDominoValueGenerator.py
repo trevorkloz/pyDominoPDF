@@ -91,11 +91,12 @@ def GenerateValidDominos(Start=0, End=4095):
         logging.debug("Index Value:{} Binary Value:{}".format(x, DPips.bin))
 
         # Row 1 and 2 Pip Count
-        R1_PC = len(list(Row1.findall([1])))
-        R2_PC = len(list(Row2.findall([1])))
+        R1_PC = Row1.uint.bit_count()
+        R2_PC = Row2.uint.bit_count()
 
         # Total pips between rows must be 6.
-        if (R1_PC + R2_PC) != 6: bPass = False
+        if (R1_PC + R2_PC) != 6:
+            bPass = False
 
         logging.debug("Row 1 Value:{} Binary Value:{} Pip Count:{}".format(Row1.uint, Row1.bin, R1_PC))
         logging.debug("Row 2 Value:{} Binary Value:{} Pip Count:{}".format(Row2.uint, Row2.bin, R2_PC))
